@@ -12,6 +12,21 @@ public class DiceRoller {
         // Show all four dice rolls with clear labels
         
         // TODO: Demonstrate the difference between seeded and unseeded
-        // Run the program multiple times to show seeded consistency
+        Random unseededDie1 = new Random();
+        Random unseededDie2 = new Random();
+        Random unseededDie3 = new Random();
+
+        int seed = 12345;
+        Random seededDie = new Random(seed);
+
+        int roll1 = unseededDie1.nextInt(6) + 1;
+        int roll2 = unseededDie2.nextInt(6) + 1;
+        int roll3 = unseededDie3.nextInt(6) + 1;
+        int seededRoll = seededDie.nextInt(6) + 1;
+
+        System.out.println("Unseeded Die 1: " + roll1);
+        System.out.println("Unseeded Die 2: " + roll2);
+        System.out.println("Unseeded Die 3: " + roll3);
+        System.out.println("Seeded Die: " + seededRoll);
     }
 }
